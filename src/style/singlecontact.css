@@ -1,0 +1,70 @@
+@import url("https://fonts.googleapis.com/css2?family=Raleway");
+p {
+	font-family: "Raleway", sans-serif;
+}
+
+.singleContact {
+	border-bottom: 1px solid black;
+	height: 100px;
+	display: flex;
+	justify-content: space-between;
+	flex-direction: row;
+	align-items: center;
+	margin-bottom: 10px;
+	width: 700px;
+}
+
+.contactButtons {
+	display: flex;
+	width: 200px;
+	justify-content: space-between;
+	height: 37px;
+}
+
+.contactButtons button {
+	border: none;
+	color: white;
+	padding: 5px;
+	text-align: center;
+	text-decoration: none;
+	display: inline-block;
+	font-size: 16px;
+	cursor: pointer;
+	width: 49px;
+}
+
+.callButton {
+	background-color: #4caf50; /* Green */
+}
+.deleteButton {
+	background-color: red;
+}
+.editButton {
+	background-color: rgb(82, 199, 232);
+}
+
+.editInputs {
+	display: flex;
+}
+.editInputs input {
+	width: 100px;
+	padding: 2px;
+	max-width: 150px;
+	min-width: 100px;
+}
+
+.contact {
+	display: flex;
+	min-width: 200px;
+	width: 57%;
+	align-items: center;
+	overflow-x: scroll;
+	justify-content: space-between;
+}
+
+.name {
+	font-size: 20px;
+}
+::-webkit-scrollbar {
+	display: none;
+}

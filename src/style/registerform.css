@@ -1,0 +1,95 @@
+.registerForm {
+	height: 50vh;
+	width: 67%;
+	display: grid;
+	grid-template-columns: 50% 50%;
+	justify-content: center;
+}
+
+.svg {
+	background: url("https://storage.googleapis.com/devitary-image-host.appspot.com/15848031292911696601-undraw_designer_life_w96d.svg")
+		100% / 100% white no-repeat;
+	height: 100%;
+	width: 100%;
+}
+.inputs {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+.form {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	height: 300px;
+}
+
+.userInputs input {
+	padding-top: 17px;
+	padding-bottom: 17px;
+	padding-left: 21px;
+	padding-right: 21px;
+	outline: none;
+	border-radius: 0.5rem;
+	width: 100%;
+	color: #667eea;
+	border-color: #667eea;
+	min-width: 255px;
+	max-width: 255px;
+}
+
+.match {
+	border-color: green;
+	transition: 0.2s ease;
+}
+
+.notMatch {
+	border-color: red;
+	transition: 0.2s ease;
+}
+
+.button {
+	padding: 11px;
+	outline: none;
+	border: none;
+	background-color: #667eea;
+	color: white;
+	cursor: pointer;
+	min-width: 300px;
+	max-width: 300px;
+}
+
+.loginLink {
+	text-decoration: none;
+	background-color: #667eea;
+	min-width: 300px;
+	max-width: 300px;
+	padding-top: 11px;
+	padding-bottom: 11px;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	color: white;
+}
+
+.nonDisplay {
+	display: none;
+}
+
+.display,
+.passError {
+	color: red;
+	margin-bottom: 20px;
+	position: absolute;
+}
+
+@media screen and (max-width: 992px) {
+	.registerForm {
+		display: flex;
+		flex-direction: column;
+		min-height: 900px;
+		justify-content: space-between;
+	}
+}
