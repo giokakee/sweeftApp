@@ -4,8 +4,9 @@ import { connect } from "react-redux";
 import { deleteDispatcher, updateDispatcher } from "../reducers/contactsreducer";
 import { logoutDispatcher } from "../reducers/userloginedreducer";
 import { useState } from "react";
+import { addCallDispatcher } from "../reducers/historyReducer";
 
-const SingleContact = ({ searchbar, contact, deleteDispatcher, logout, update }) => {
+const SingleContact = ({ searchbar, contact, deleteDispatcher, logout, update, addCall }) => {
 	const [edit, setEdit] = useState(false);
 	const [contactForEdit, setContactForEdit] = useState({ name: contact.name, number: contact.number });
 
@@ -55,7 +56,7 @@ const SingleContact = ({ searchbar, contact, deleteDispatcher, logout, update })
 				calledTo: contact.name,
 			});
 			if (data) {
-				console.log(data);
+				addCall(data);
 			} else {
 				logout();
 			}
@@ -120,6 +121,9 @@ const mapDispatchToProps = dispatch => {
 		},
 		update: data => {
 			dispatch(updateDispatcher(data));
+		},
+		addCall: data => {
+			dispatch(addCallDispatcher(data));
 		},
 	};
 };
